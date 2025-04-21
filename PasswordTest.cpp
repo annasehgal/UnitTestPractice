@@ -20,3 +20,32 @@ TEST(PasswordTest, single_letter_password)
 	int actual = my_password.count_leading_characters("Z");
 	ASSERT_EQ(1, actual);
 }
+
+// ASSERT_TRUE(my.has_mixed_case("Password")) // takes one parameter
+// ASSERT_FALSE
+
+TEST(PasswordTest, is_empty)
+{
+	Password my_password;
+	int actual = my_password.count_leading_characters("");
+	ASSERT_EQ(1, actual);
+}
+
+TEST(PasswordTest, isMixed)
+{
+	Password my;
+	// int actual = my.has_mixed_case("Password");
+	ASSERT_TRUE(my.has_mixed_case("Ab"));
+}
+
+TEST(PasswordTest, isLowerall)
+{
+	Password all;
+	ASSERT_FALSE(all.has_mixed_case("lower"));
+}
+
+TEST(PasswordTest, hasLowerUpper) 
+{
+	Password L_and_U;
+	ASSERT_TRUE(L_and_U.has_mixed_case("Password"));
+}
