@@ -73,9 +73,3 @@ TEST(PasswordTest, empty)
 	Password nothing;
 	ASSERT_FALSE(nothing.has_mixed_case(""));
 }
-
-TEST(PasswordTest, failsempty)
-{
-	Password nothing;
-	ASSERT_TRUE(nothing.has_mixed_case(""));
-}

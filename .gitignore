@@ -36,3 +36,7 @@
 *.gcno
 
 *.vscode
+
+*.DS_Store
+
+Password.cpp.gcov
