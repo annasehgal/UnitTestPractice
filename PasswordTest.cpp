@@ -49,3 +49,33 @@ TEST(PasswordTest, hasLowerUpper)
 	Password L_and_U;
 	ASSERT_TRUE(L_and_U.has_mixed_case("Password"));
 }
+
+TEST(PasswordTest, shouldFail)
+{
+	Password failure;
+	ASSERT_TRUE(failure.has_mixed_case("$$$"));
+}
+
+TEST(PasswordTest, willFail)
+{
+	Password fails;
+	ASSERT_FALSE(fails.has_mixed_case("$$$"));
+}
+
+TEST(PasswordTest, noupper)
+{
+	Password here;
+	ASSERT_FALSE(here.has_mixed_case("aaaaa"));
+}
+
+TEST(PasswordTest, empty)
+{
+	Password nothing;
+	ASSERT_FALSE(nothing.has_mixed_case(""));
+}
+
+TEST(PasswordTest, failsempty)
+{
+	Password nothing;
+	ASSERT_TRUE(nothing.has_mixed_case(""));
+}
