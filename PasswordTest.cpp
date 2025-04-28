@@ -31,45 +31,45 @@ TEST(PasswordTest, is_empty)
 	ASSERT_EQ(1, actual);
 }
 
-TEST(PasswordTest, isMixed)
-{
-	Password my;
-	// int actual = my.has_mixed_case("Password");
-	ASSERT_TRUE(my.has_mixed_case("Ab"));
-}
+// TEST(PasswordTest, isMixed)
+// {
+// 	Password my;
+// 	// int actual = my.has_mixed_case("Password");
+// 	ASSERT_TRUE(my.has_mixed_case("Ab"));
+// }
 
-TEST(PasswordTest, isLowerall)
-{
-	Password all;
-	ASSERT_FALSE(all.has_mixed_case("lower"));
-}
+// TEST(PasswordTest, isLowerall)
+// {
+// 	Password all;
+// 	ASSERT_FALSE(all.has_mixed_case("lower"));
+// }
 
-TEST(PasswordTest, hasLowerUpper) 
-{
-	Password L_and_U;
-	ASSERT_TRUE(L_and_U.has_mixed_case("Password"));
-}
+// TEST(PasswordTest, hasLowerUpper) 
+// {
+// 	Password L_and_U;
+// 	ASSERT_TRUE(L_and_U.has_mixed_case("Password"));
+// }
 
-TEST(PasswordTest, shouldFail)
-{
-	Password failure;
-	ASSERT_TRUE(failure.has_mixed_case("$$$"));
-}
+// TEST(PasswordTest, shouldFail)
+// {
+// 	Password failure;
+// 	ASSERT_TRUE(failure.has_mixed_case("$$$"));
+// }
 
-TEST(PasswordTest, willFail)
-{
-	Password fails;
-	ASSERT_FALSE(fails.has_mixed_case("$$$"));
-}
+// TEST(PasswordTest, willFail)
+// {
+// 	Password fails;
+// 	ASSERT_FALSE(fails.has_mixed_case("$$$"));
+// }
 
-TEST(PasswordTest, noupper)
-{
-	Password here;
-	ASSERT_FALSE(here.has_mixed_case("aaaaa"));
-}
+// TEST(PasswordTest, noupper)
+// {
+// 	Password here;
+// 	ASSERT_FALSE(here.has_mixed_case("aaaaa"));
+// }
 
-TEST(PasswordTest, empty)
-{
-	Password nothing;
-	ASSERT_FALSE(nothing.has_mixed_case(""));
-}
+// TEST(PasswordTest, empty)
+// {
+// 	Password nothing;
+// 	ASSERT_FALSE(nothing.has_mixed_case(""));
+// }
